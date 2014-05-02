@@ -1,13 +1,33 @@
+Fork of [Processing's Library Template](https://github.com/processing/processing-library-template). 
+
+This differs from [Processing's Template](https://github.com/processing/processing-library-template) in the following ways:
+ - Uses a different stylesheet. Here is [an example](https://dl.dropboxusercontent.com/u/6990683/Processing/papaya/reference/index.html).
+ - Path to src files is now `src/` instead of  `src/template/library/`
+ - Removed files fromt he `web` folder since I never use it (you can still get them from [the processin-lib-template/web page](https://github.com/processing/processing-library-template/tree/master/web) though).
+ 
 The following describes how to set up a Processing library project in Eclipse and build it successfully, and to make your library ready for distribution.
 
 ## Import to Eclipse
 
 There are two options to import the template project into Eclipse: using a Git [fork](https://help.github.com/articles/fork-a-repo) or using a downloaded package. If you are not familiar with Git or GitHub, you should opt for the downloaded package.
 
-### Option A: GitHub
+  
+### Option A: Downloaded Package
+
+1. Download the latest Eclipse template from [here](https://github.com/processing/processing-library-template/releases). **Don't unzip the ZIP file yet.**
+1. Create a new Java project in Eclipse. 
+  * From the menubar choose File → New → Java Project. 
+  * Give the project the name of your library. 
+  * Click "Finish".
+1. Import the template source files.
+  * Right-click (ctrl-click) onto the folder icon of your newly created project in the Package Explorer and select "Import..." from the menu that pops up. 
+  * Select General → Archive File, and click "Next >".
+  * Navigate to the ZIP file you downloaded earlier in step 1, and click "Finish".
+
+### Option B: GitHub
 
 1. Fork the template repository to use as a starting point.
-  * Navigate to https://github.com/processing/processing-library-template in your browser.
+  * Navigate to https://github.com/adilapapaya/processing-library-template in your browser.
   * Click the "Fork" button in the top-right of the page.
   * Once your fork is ready, open the new repository's "Settings" by clicking the link in the menu bar on the right.
   * Change the repository name to the name of your library and save your changes.
@@ -26,18 +46,6 @@ There are two options to import the template project into Eclipse: using a Git [
   * In the Package Explorer, right-click (ctrl-click) on the folder icon of the `processing-library-template` project, and select Refactor → Rename... from the menu that pops up. 
   * Give the project the name of your library, and click "OK".
   
-### Option B: Downloaded Package
-
-1. Download the latest Eclipse template from [here](https://github.com/processing/processing-library-template/releases). **Don't unzip the ZIP file yet.**
-1. Create a new Java project in Eclipse. 
-  * From the menubar choose File → New → Java Project. 
-  * Give the project the name of your library. 
-  * Click "Finish".
-1. Import the template source files.
-  * Right-click (ctrl-click) onto the folder icon of your newly created project in the Package Explorer and select "Import..." from the menu that pops up. 
-  * Select General → Archive File, and click "Next >".
-  * Navigate to the ZIP file you downloaded earlier in step 1, and click "Finish".
-
 ## Set Up and Compile
 
 1. Add Processing to the project build path.
@@ -64,11 +72,11 @@ To distribute your library please refer to the [Library Guidelines](https://gith
 
 ## Source code
 
-If you want to share your library's source code, we recommend using an online repository available for free at [Google Code] (http://code.google.com) or [GitHub](https://github.com/).
+Just use [GitHub](https://github.com/).
 
 ## <a name='AddingJARs'/>Adding core.jar and other .jar files to your classpath</a>
 
-The `core.jar` file contains the core classes of Processing and has to be part of your classpath when building a library. On Windows and Linux, this file is located in the Processing distribution folder inside a folder named `lib`. On Mac OS X, right-click the Processing.app and use "Show Package Contents" to see the guts. The `core.jar` file is inside Contents → Resources → Java. For further information about the classes in `core.jar`, you can see the source [here](http://code.google.com/p/processing/source/browse/trunk/processing#processing/core) and the developer documentation [here](http://processing.googlecode.com/svn/trunk/processing/build/javadoc/core/index.html).
+The `core.jar` file contains the core classes of Processing and has to be part of your classpath when building a library. On Windows and Linux, this file is located in the Processing distribution folder inside a folder named `lib`. On Mac OS X, right-click the Processing.app and use "Show Package Contents" to see the guts. The `core.jar` file is inside Contents → Resources → Java. For further information about the classes in `core.jar`, you can see the source [on github](https://github.com/processing/processing) and the developer documentation in [the javadocs](http://processing.googlecode.com/svn/trunk/processing/build/javadoc/core/index.html).
 
 If you created a `libs` folder as described above, put the libraries you need to add to your classpath in there. In the "Properties" of your Java project, navigate to Java Build Path → Libraries, and click "Add External JARs...". Select the `.jar` files from the `libs` folder that are required for compiling your project. Adjust the `build.xml` file accordingly.
 
