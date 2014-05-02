@@ -1,0 +1,133 @@
+/* Javadoc style sheet */
+/* Define colors, fonts and other style attributes here to override the defaults */
+
+/*
+To compile:
+cd into folder
+sass -s --watch style.scss:style.css
+*/
+
+$font-weight-light: 200;
+$font-weight-medium: 400;
+$font-weight-heavy: 500;
+
+/** colors */
+$steelblue:                 #1f77b4;
+$orange:                    #ff7f0e;
+$green:                     #2ca02c;
+$red:                       #aa0000;
+$yellow:                    #ffff00;
+$indigo:					#72587F;
+$light-gray:				#aaaaaa;
+$medium-gray:				#666666;
+$dark-gray:					#444444;
+
+$black:						#222;
+
+$font-size-base: 			13px;
+$font-size-small:			0.9em;
+$font-size-large:			1.2em;
+
+$border-radius:				4px;
+/* Page background color */
+body { 
+	background-color: #FFFFFF; 
+	color:$dark-gray;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:$font-size-base;
+}
+
+/*
+ #B0DAFF    Light blue text
+ #1279C6    Blue background
+ #04469D    Darker blue background
+ $steelblue    Orange Text
+ #F1F1F1    Ligher gray
+*/
+
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 { color:$steelblue; }
+
+
+/* Links */
+a:link{
+	color:$steelblue; 
+	text-decoration:underline;
+}
+a:visited {color:$indigo;  }
+/*a:focus {font-weight:bold; color:#04469D; text-decoration:underline; }*/
+a:hover {
+	font-weight:bold;
+}
+
+/* HR and table borders*/
+hr{
+	border-style: solid 1px $medium-gray;
+}
+table{
+	border-style: solid 1px $medium-gray;
+}
+th{
+	border-style: none;
+}
+td{ 
+	padding: 4px; 
+	-size: $font-size-small;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: $font-size-small;
+}
+code {
+  padding: 2px 4px;
+  font-size: $font-size-small;
+  color: #c7254e;
+  white-space: nowrap;
+  background-color: #f9f2f4;
+  border-radius: $border-radius;
+}
+
+/* Table colors */
+.TableHeadingColor , .TableSubHeadingColor  { 
+	background: $black; color:#FFFFFF; border-radius:$border-radius;
+} 
+.TableRowColor         { 
+	background: #FFFFFF; color:$medium-gray; 
+	font-size:$font-size-small;
+} 
+
+/* Font used in left-hand frame lists */
+.FrameTitleFont   { 
+	font-size: 100%; font-family: Helvetica, Arial, sans-serif; color:$steelblue;
+}
+.FrameHeadingFont , .FrameItemFont    { 
+	font-size: $font-size-small; font-family: Helvetica, Arial, sans-serif; color:$steelblue;
+}
+
+/* Navigation bar fonts and colors */
+.NavBarCell1  { 
+	background-color:$black; 
+	color:$black;
+	border-radius: 4px;
+} 
+
+.NavBarCell1Rev { 
+	background-color:$steelblue !important;
+	color:#FFFFFF;
+	border-radius:4px;
+} 
+.NavBarFont1, .NavBarFont1Rev  { 
+	font-family: Arial, Helvetica, sans-serif; color:#FFFFFF;
+}
+.NavBarFont1:hover{
+	color:$steelblue;
+}
+.NavBarCell2 , .NavBarCell3    { 
+	font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF; color:$black;
+}
