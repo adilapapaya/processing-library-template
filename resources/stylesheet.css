@@ -3,7 +3,8 @@
 /*
 To compile:
 cd into folder
-sass -s --watch style.scss:style.css
+sass -s --watch stylesheet.scss:stylesheet.css
+or, just use the Makefile!
 */
 /** colors */
 /* Page background color */
@@ -11,7 +12,8 @@ body {
   background-color: #FFFFFF;
   color: #444444;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px; }
+  font-size: 13px;
+  max-width: 900px; }
 
 /*
  #B0DAFF    Light blue text
@@ -41,7 +43,9 @@ hr {
   border-style: solid 1px #666666; }
 
 table {
-  border-style: solid 1px #666666; }
+  border-style: solid 1px #666666;
+  max-width: 100%;
+  overflow: wrap; }
 
 th {
   border-style: none; }
@@ -61,7 +65,6 @@ code {
   padding: 2px 4px;
   font-size: 0.9em;
   color: #c7254e;
-  white-space: nowrap;
   background-color: #f9f2f4;
   border-radius: 4px; }
 
