@@ -210,14 +210,22 @@ ${line}
 	
 	<target name="generate.javadoc" if="is.normal">
 	  	<!-- create the java reference of the library -->
-		<javadoc bottom="Processing library ${project.name} by ${author.name}. ${library.copyright}" 
+		<javadoc 
 				classpath="${classpath.local.location}/core.jar;{project.bin}" 
 				destdir="${project.tmp}/${project.name}/reference" 
 				verbose="false" 
 				stylesheetfile="resources/stylesheet.css" 
 				doctitle="Javadocs: ${project.name}" 
 				public="true" version="false" 
-				windowtitle="Javadocs: ${project.name}">
+				windowtitle="Javadocs: ${project.name}" 	 
+			>
+			<!-- Add link to author's homepage -->
+			<bottom>
+			    <![CDATA[
+			      <a href="http://processing.org">Processing</a> library ${project.name} by 
+				  <a href="${author.url}">${author.name}</a>. ${library.copyright}
+			    ]]>
+			</bottom>
  			
  			<link href="${javadoc.java.href}" />
 			<link href="${javadoc.processing.href}" />
